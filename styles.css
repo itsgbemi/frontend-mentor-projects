@@ -1,0 +1,150 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure body takes full height */
+}
+
+.light-mode {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(221, 245, 255, 1));
+    color: rgba(51, 51, 51, 1);
+}
+
+.dark-mode {
+    background: rgba(20, 21, 21, 1);
+    color: rgba(225, 227, 232, 1);
+}
+
+.header {
+    background-color: white; /* White background for light mode */
+    color: rgba(51, 51, 51, 1);
+    padding: 1rem;
+}
+
+.dark-mode .header {
+    background-color: rgba(20, 21, 21, 1); /* Black background for dark mode */
+    color: rgba(225, 227, 232, 1);
+}
+
+.theme-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: border 0.3s;
+}
+
+.sun-icon.border {
+    border-radius: 50%;
+    border: 2px solid rgba(212, 242, 255, 1);
+}
+
+.moon-icon.border {
+    border-radius: 50%;
+    border: 2px solid rgba(212, 242, 255, 1);
+}
+
+.main {
+    display: flex;
+    flex: 1; 
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: left;
+    max-width: 1200px;
+    margin: 20px auto; 
+    padding: 20px;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.hero p {
+    margin-bottom: 10px;
+}
+
+.solutions {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.solutions h2 {
+    margin-bottom: 10px;
+    color: rgba(51, 51, 51, 1);
+    transition: color 0.3s;
+}
+
+.dark-mode .solutions h2 {
+    color: rgba(225, 227, 232, 1); 
+}
+
+.solutions ul {
+    list-style-type: disc;
+    padding-left: 20px; 
+    text-align: left; 
+}
+
+.solutions ul li {
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.solutions ul li a {
+    text-decoration: underline; 
+    color: rgba(51, 51, 51, 1); 
+    transition: color 0.3s;
+}
+
+
+.dark-mode .solutions ul li a {
+    color: rgba(225, 227, 232, 1);
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-icon {
+    width: 24px;
+    height: 24px;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero h1,
+    .hero p {
+        text-align: left;
+    }
+}
+
+@media (min-width: 769px) {  
+    .solutions {
+        align-items: center;
+    }
+}
